@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+               
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times"></i>
+                </ul>
+                <i class="fas fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p>Back-end developer</p>
+                <h1>Hi, I'm <span>Marcelo</span><br>from Brazil</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----------ABOUT---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I'm a dedicated backend developer. My focus is on crafting efficient, scalable web applications with a strong emphasis on clean code and robust architecture. I thrive on problem-solving and collaboration, and I'm always eager to stay updated with the latest industry trends. Let's connect and turn your ideas into reality..</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Back-End</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span><br>Freelancer</li>
+                        
+                        </ul>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+    <!-- ----------SERVICES---------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    <h2>Back-end</h2>
+                    <p>As a back-end developer, my responsibility is to create the behind-the-scenes brain.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Front-end</h2>
+                    <p>Even though my primary focus is backend development, I also have experience in building frontend applications.</p>
+                    <a href="#">Learn more</a>
+
+                </div>
+             </div>
+        </div>
+    </div>
+    <!-- ----------PORTFOLIO--------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h2>Tic-Tac-Toe</h2>
+                        <p>Tic-Tac-Toe game in JavaScript.Players can compete against each other on the 3x3 grid, taking turns with 'X' and 'O' in pursuit of victory. The interactive experience offers both fun and challenge, and the game's logic ensures fair gameplay. Check out this project as an example of my work in web development and coding enjoyment!</p>
+                        <a href="https://github.com/mrcl19/jogodavelha"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h2>Animated Sign-In</h2>
+                        <p>Introducing my login screen project featuring an animated image.  Users are greeted with an eye-catching animation upon arrival, setting a visually engaging tone. The login process is seamlessly integrated, providing a smooth user experience. Explore this project to see how I blend functionality with aesthetics to create captivating user interfaces.</p>
+                        <a href="https://github.com/mrcl19/loginanimado"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h2>Simple Sign-In</h2>
+                        <p>The screen provides an intuitive and elegant user login experience. The emphasis on usability and aesthetics seamlessly blend to craft an attractive and efficient user entry.</p>
+                        <a href="https://github.com/mrcl19/loginnormal"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- ----------CONTACT---------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> marceloliveiramano@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> (51) 99711-3201</p>
+                    <div class="social-icons">
+                       <a href="https://github.com/mrcl19"><i class="fab fa-github"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ Dev Marcelo. Made by Dev Marcelo</p>
+        </div>
+    </div>
+
+
+    <script>
+        let tabLinks = document.getElementsByClassName('tab-links');
+        let tabContents = document.getElementsByClassName('tab-contents');
+
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove('active-link');
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+
+        // JavaScript for handling the mobile navigation menu
+        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelector('.fas.fa-times').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.remove('show');
+        });
+
+    </script>
+
+</body>
+
+</html>
